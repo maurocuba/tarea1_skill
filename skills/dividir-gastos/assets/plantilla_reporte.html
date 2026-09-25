@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$titulo</title>
+<style>
+  :root {
+    --bg: #F6F5F1; --card: #FFFFFF; --ink: #1F2328; --muted: #636C76;
+    --line: #E3E1DA; --accent: #1F6F5C; --pos: #1F7A4D; --neg: #B3261E;
+    --warn-bg: #FFF4D6; --warn-ink: #7A5A00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15181C; --card: #1E2227; --ink: #E8EAED; --muted: #9AA3AD;
+      --line: #30363D; --accent: #5CC2A5; --pos: #6BD39A; --neg: #FF8A80;
+      --warn-bg: #3A3113; --warn-ink: #F2D27A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 32px 16px 48px; }
+  header h1 { margin: 0 0 4px; font-size: 28px; letter-spacing: -0.02em; }
+  header p { margin: 0; color: var(--muted); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+           gap: 12px; margin: 24px 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .card .k { color: var(--muted); font-size: 13px; }
+  .card .v { font-size: 24px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+            padding: 20px; margin-top: 16px; }
+  section h2 { margin: 0 0 12px; font-size: 18px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; font-size: 13px; }
+  td.n, th.n { text-align: right; }
+  .pos { color: var(--pos); font-weight: 600; }
+  .neg { color: var(--neg); font-weight: 600; }
+  .transfer { display: flex; align-items: center; gap: 10px; padding: 10px 0;
+              border-bottom: 1px solid var(--line); font-size: 16px; }
+  .transfer:last-child { border-bottom: 0; }
+  .transfer .arrow { color: var(--muted); }
+  .transfer .amt { margin-left: auto; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px;
+          color: #fff; }
+  .bar-row { display: grid; grid-template-columns: 110px 1fr 110px; gap: 8px;
+             align-items: center; margin: 6px 0; font-size: 14px; }
+  .bar-track { background: var(--line); border-radius: 6px; height: 14px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; }
+  .bar-row .n { text-align: right; font-variant-numeric: tabular-nums; }
+  .warn { background: var(--warn-bg); color: var(--warn-ink); border-radius: 10px;
+          padding: 12px 16px; margin-top: 16px; }
+  .warn ul { margin: 6px 0 0; padding-left: 18px; }
+  .scroll { overflow-x: auto; }
+  td:first-child, td.n, .card .v, .transfer .amt { white-space: nowrap; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 24px; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>$titulo</h1>
+    <p>Generado el $fecha_generado · Moneda base: $moneda_base · Archivo: $archivo</p>
+  </header>
+
+  <div class="cards">
+    <div class="card"><div class="k">Total gastado</div><div class="v">$total</div></div>
+    <div class="card"><div class="k">Gastos registrados</div><div class="v">$n_gastos</div></div>
+    <div class="card"><div class="k">Personas</div><div class="v">$n_personas</div></div>
+    <div class="card"><div class="k">Transferencias necesarias</div><div class="v">$n_transferencias</div></div>
+  </div>
+
+  $advertencias
+
+  <section>
+    <h2>Quién le paga a quién</h2>
+    $filas_transferencias
+  </section>
+
+  <section>
+    <h2>Balance por persona</h2>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>Persona</th><th class="n">Pagó</th><th class="n">Le corresponde</th><th class="n">Balance</th></tr></thead>
+      <tbody>$filas_balances</tbody>
+    </table>
+    </div>
+  </section>
+
+  <div class="grid2">
+    <section>
+      <h2>Gasto por categoría</h2>
+      $grafico_categorias
+    </section>
+    <section>
+      <h2>Consumo por persona</h2>
+      $grafico_personas
+    </section>
+  </div>
+
+  <section>
+    <h2>Detalle de gastos</h2>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>Fecha</th><th>Descripción</th><th>Categoría</th><th>Pagó</th><th>Participantes</th><th class="n">Original</th><th class="n">Monto ($moneda_base)</th></tr></thead>
+      <tbody>$filas_gastos</tbody>
+    </table>
+    </div>
+  </section>
+
+  <footer>Skill <strong>dividir-gastos</strong> · Balance positivo = le deben; negativo = debe.</footer>
+</main>
+</body>
+</html>

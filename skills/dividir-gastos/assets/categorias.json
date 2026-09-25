@@ -1,0 +1,13 @@
+{
+  "_nota": "Categorías permitidas y su color en el reporte. Una categoría desconocida se reemplaza por 'otros' con advertencia W003.",
+  "por_defecto": "otros",
+  "categorias": {
+    "comida":      {"etiqueta": "Comida",      "color": "#E8743B"},
+    "transporte":  {"etiqueta": "Transporte",  "color": "#3B82C4"},
+    "alojamiento": {"etiqueta": "Alojamiento", "color": "#7A5CC7"},
+    "entradas":    {"etiqueta": "Entradas y tours", "color": "#2E9E6B"},
+    "compras":     {"etiqueta": "Compras",     "color": "#C9489A"},
+    "servicios":   {"etiqueta": "Servicios",   "color": "#B8942A"},
+    "otros":       {"etiqueta": "Otros",       "color": "#7D8590"}
+  }
+}

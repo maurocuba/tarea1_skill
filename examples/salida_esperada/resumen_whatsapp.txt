@@ -1,0 +1,15 @@
+*Viaje a Uyuni*
+Total gastado: Bs 5 165.90 (9 gastos, 4 personas)
+
+*Balances*
+- Mauro: pagó Bs 681.40, le toca Bs 1 206.17 → debe Bs 524.77
+- Ana: pagó Bs 3 580.80, le toca Bs 1 342.78 → le deben Bs 2 238.02
+- Luis: pagó Bs 270.50, le toca Bs 1 254.17 → debe Bs 983.67
+- Carla: pagó Bs 633.20, le toca Bs 1 362.78 → debe Bs 729.58
+
+*Transferencias para quedar a mano*
+1. Luis → Ana: Bs 983.67
+2. Carla → Ana: Bs 729.58
+3. Mauro → Ana: Bs 524.77
+
+Generado con la skill dividir-gastos

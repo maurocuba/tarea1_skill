@@ -1,0 +1,10 @@
+fecha,descripcion,monto,moneda,pagado_por,participantes,categoria
+2026-08-14,Bus La Paz - Uyuni (4 pasajes),560.00,BOB,Mauro,todos,transporte
+2026-08-15,Tour 3 días Salar (agencia),480.00,USD,Ana,todos,entradas
+2026-08-15,Almuerzo en Colchani,210.50,BOB,Luis,todos,comida
+2026-08-15,Hostal noche 1,320.00,BOB,Carla,todos,alojamiento
+2026-08-16,Snacks y agua para el tour,86.40,BOB,Mauro,todos,comida
+2026-08-16,Cena (Luis pidió doble),240.00,BOB,Ana,Ana|Luis:2|Carla|Mauro,comida
+2026-08-17,Aguas termales Polques,60.00,BOB,Luis,Luis|Carla|Mauro,entradas
+2026-08-17,Souvenirs de sal,45.00,USD,Carla,Carla|Ana,compras
+2026-08-18,Taxi al terminal,35.00,BOB,Mauro,todos,transporte

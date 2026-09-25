@@ -1,0 +1,14 @@
+{
+  "_nota": "Tasas de referencia para convertir a la moneda base. Edita este archivo o pasa --tasas otra_ruta.json. 1 unidad de la moneda = N unidades de la moneda base.",
+  "moneda_base": "BOB",
+  "simbolo_base": "Bs",
+  "tasas": {
+    "BOB": 1,
+    "USD": 6.96,
+    "EUR": 7.55,
+    "PEN": 1.85,
+    "ARS": 0.0072,
+    "CLP": 0.0074,
+    "BRL": 1.27
+  }
+}

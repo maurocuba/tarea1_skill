@@ -1,0 +1,10 @@
+*$titulo*
+Total gastado: $total ($n_gastos gastos, $n_personas personas)
+
+*Balances*
+$balances
+
+*Transferencias para quedar a mano*
+$transferencias
+
+Generado con la skill dividir-gastos

@@ -1,0 +1,10 @@
+fecha,descripcion,monto,moneda,pagado_por,participantes,categoria
+2026-08-14,Bus,560.00,BOB,Mauro,todos,transporte
+15/08/2026,Tour,480.00,USD,Ana,todos,entradas
+2026-08-15,Almuerzo,-210.50,BOB,Luis,todos,comida
+2026-08-15,Hostal,320.00,GBP,Carla,todos,alojamiento
+2026-08-16,Snacks,86.40,BOB,,todos,comida
+2026-08-16,Cena,240.00,BOB,Ana,Ana|Luis:dos|Carla,comida
+2026-08-17,Termas,sesenta,BOB,Mauor,Luis|Carla,entradas
+2026-08-17,Taxi,35.00,BOB,Mauro,todos,taxi
+2026-08-17,Taxi,35.00,BOB,Mauro,todos,taxi

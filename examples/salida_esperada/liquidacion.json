@@ -1,0 +1,250 @@
+{
+  "moneda_base": "BOB",
+  "unidad": "centavos",
+  "total": 516590,
+  "personas": [
+    {
+      "nombre": "Mauro",
+      "pagado": 68140,
+      "consumido": 120617,
+      "balance": -52477
+    },
+    {
+      "nombre": "Ana",
+      "pagado": 358080,
+      "consumido": 134278,
+      "balance": 223802
+    },
+    {
+      "nombre": "Luis",
+      "pagado": 27050,
+      "consumido": 125417,
+      "balance": -98367
+    },
+    {
+      "nombre": "Carla",
+      "pagado": 63320,
+      "consumido": 136278,
+      "balance": -72958
+    }
+  ],
+  "transferencias": [
+    {
+      "de": "Luis",
+      "a": "Ana",
+      "monto": 98367
+    },
+    {
+      "de": "Carla",
+      "a": "Ana",
+      "monto": 72958
+    },
+    {
+      "de": "Mauro",
+      "a": "Ana",
+      "monto": 52477
+    }
+  ],
+  "por_categoria": {
+    "entradas": 340080,
+    "transporte": 59500,
+    "comida": 53690,
+    "alojamiento": 32000,
+    "compras": 31320
+  },
+  "gastos": [
+    {
+      "linea": 2,
+      "fecha": "2026-08-14",
+      "descripcion": "Bus La Paz - Uyuni (4 pasajes)",
+      "monto_original": "560.00",
+      "moneda": "BOB",
+      "monto_base": 56000,
+      "pagado_por": "Mauro",
+      "participantes": {
+        "Mauro": "1",
+        "Ana": "1",
+        "Luis": "1",
+        "Carla": "1"
+      },
+      "categoria": "transporte",
+      "partes": {
+        "Mauro": 14000,
+        "Ana": 14000,
+        "Luis": 14000,
+        "Carla": 14000
+      }
+    },
+    {
+      "linea": 3,
+      "fecha": "2026-08-15",
+      "descripcion": "Tour 3 días Salar (agencia)",
+      "monto_original": "480.00",
+      "moneda": "USD",
+      "monto_base": 334080,
+      "pagado_por": "Ana",
+      "participantes": {
+        "Mauro": "1",
+        "Ana": "1",
+        "Luis": "1",
+        "Carla": "1"
+      },
+      "categoria": "entradas",
+      "partes": {
+        "Mauro": 83520,
+        "Ana": 83520,
+        "Luis": 83520,
+        "Carla": 83520
+      }
+    },
+    {
+      "linea": 4,
+      "fecha": "2026-08-15",
+      "descripcion": "Almuerzo en Colchani",
+      "monto_original": "210.50",
+      "moneda": "BOB",
+      "monto_base": 21050,
+      "pagado_por": "Luis",
+      "participantes": {
+        "Mauro": "1",
+        "Ana": "1",
+        "Luis": "1",
+        "Carla": "1"
+      },
+      "categoria": "comida",
+      "partes": {
+        "Mauro": 5262,
+        "Ana": 5263,
+        "Luis": 5262,
+        "Carla": 5263
+      }
+    },
+    {
+      "linea": 5,
+      "fecha": "2026-08-15",
+      "descripcion": "Hostal noche 1",
+      "monto_original": "320.00",
+      "moneda": "BOB",
+      "monto_base": 32000,
+      "pagado_por": "Carla",
+      "participantes": {
+        "Mauro": "1",
+        "Ana": "1",
+        "Luis": "1",
+        "Carla": "1"
+      },
+      "categoria": "alojamiento",
+      "partes": {
+        "Mauro": 8000,
+        "Ana": 8000,
+        "Luis": 8000,
+        "Carla": 8000
+      }
+    },
+    {
+      "linea": 6,
+      "fecha": "2026-08-16",
+      "descripcion": "Snacks y agua para el tour",
+      "monto_original": "86.40",
+      "moneda": "BOB",
+      "monto_base": 8640,
+      "pagado_por": "Mauro",
+      "participantes": {
+        "Mauro": "1",
+        "Ana": "1",
+        "Luis": "1",
+        "Carla": "1"
+      },
+      "categoria": "comida",
+      "partes": {
+        "Mauro": 2160,
+        "Ana": 2160,
+        "Luis": 2160,
+        "Carla": 2160
+      }
+    },
+    {
+      "linea": 7,
+      "fecha": "2026-08-16",
+      "descripcion": "Cena (Luis pidió doble)",
+      "monto_original": "240.00",
+      "moneda": "BOB",
+      "monto_base": 24000,
+      "pagado_por": "Ana",
+      "participantes": {
+        "Ana": "1",
+        "Luis": "2",
+        "Carla": "1",
+        "Mauro": "1"
+      },
+      "categoria": "comida",
+      "partes": {
+        "Ana": 4800,
+        "Luis": 9600,
+        "Carla": 4800,
+        "Mauro": 4800
+      }
+    },
+    {
+      "linea": 8,
+      "fecha": "2026-08-17",
+      "descripcion": "Aguas termales Polques",
+      "monto_original": "60.00",
+      "moneda": "BOB",
+      "monto_base": 6000,
+      "pagado_por": "Luis",
+      "participantes": {
+        "Luis": "1",
+        "Carla": "1",
+        "Mauro": "1"
+      },
+      "categoria": "entradas",
+      "partes": {
+        "Luis": 2000,
+        "Carla": 2000,
+        "Mauro": 2000
+      }
+    },
+    {
+      "linea": 9,
+      "fecha": "2026-08-17",
+      "descripcion": "Souvenirs de sal",
+      "monto_original": "45.00",
+      "moneda": "USD",
+      "monto_base": 31320,
+      "pagado_por": "Carla",
+      "participantes": {
+        "Carla": "1",
+        "Ana": "1"
+      },
+      "categoria": "compras",
+      "partes": {
+        "Carla": 15660,
+        "Ana": 15660
+      }
+    },
+    {
+      "linea": 10,
+      "fecha": "2026-08-18",
+      "descripcion": "Taxi al terminal",
+      "monto_original": "35.00",
+      "moneda": "BOB",
+      "monto_base": 3500,
+      "pagado_por": "Mauro",
+      "participantes": {
+        "Mauro": "1",
+        "Ana": "1",
+        "Luis": "1",
+        "Carla": "1"
+      },
+      "categoria": "transporte",
+      "partes": {
+        "Mauro": 875,
+        "Ana": 875,
+        "Luis": 875,
+        "Carla": 875
+      }
+    }
+  ],
+  "advertencias": []
+}

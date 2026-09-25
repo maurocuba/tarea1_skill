@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viaje a Uyuni</title>
+<style>
+  :root {
+    --bg: #F6F5F1; --card: #FFFFFF; --ink: #1F2328; --muted: #636C76;
+    --line: #E3E1DA; --accent: #1F6F5C; --pos: #1F7A4D; --neg: #B3261E;
+    --warn-bg: #FFF4D6; --warn-ink: #7A5A00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15181C; --card: #1E2227; --ink: #E8EAED; --muted: #9AA3AD;
+      --line: #30363D; --accent: #5CC2A5; --pos: #6BD39A; --neg: #FF8A80;
+      --warn-bg: #3A3113; --warn-ink: #F2D27A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 32px 16px 48px; }
+  header h1 { margin: 0 0 4px; font-size: 28px; letter-spacing: -0.02em; }
+  header p { margin: 0; color: var(--muted); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+           gap: 12px; margin: 24px 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .card .k { color: var(--muted); font-size: 13px; }
+  .card .v { font-size: 24px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+            padding: 20px; margin-top: 16px; }
+  section h2 { margin: 0 0 12px; font-size: 18px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; font-size: 13px; }
+  td.n, th.n { text-align: right; }
+  .pos { color: var(--pos); font-weight: 600; }
+  .neg { color: var(--neg); font-weight: 600; }
+  .transfer { display: flex; align-items: center; gap: 10px; padding: 10px 0;
+              border-bottom: 1px solid var(--line); font-size: 16px; }
+  .transfer:last-child { border-bottom: 0; }
+  .transfer .arrow { color: var(--muted); }
+  .transfer .amt { margin-left: auto; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px;
+          color: #fff; }
+  .bar-row { display: grid; grid-template-columns: 110px 1fr 110px; gap: 8px;
+             align-items: center; margin: 6px 0; font-size: 14px; }
+  .bar-track { background: var(--line); border-radius: 6px; height: 14px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; }
+  .bar-row .n { text-align: right; font-variant-numeric: tabular-nums; }
+  .warn { background: var(--warn-bg); color: var(--warn-ink); border-radius: 10px;
+          padding: 12px 16px; margin-top: 16px; }
+  .warn ul { margin: 6px 0 0; padding-left: 18px; }
+  .scroll { overflow-x: auto; }
+  td:first-child, td.n, .card .v, .transfer .amt { white-space: nowrap; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 24px; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Viaje a Uyuni</h1>
+    <p>Generado el 2026-09-25 12:52 · Moneda base: BOB · Archivo: viaje_uyuni.csv</p>
+  </header>
+
+  <div class="cards">
+    <div class="card"><div class="k">Total gastado</div><div class="v">Bs 5 165.90</div></div>
+    <div class="card"><div class="k">Gastos registrados</div><div class="v">9</div></div>
+    <div class="card"><div class="k">Personas</div><div class="v">4</div></div>
+    <div class="card"><div class="k">Transferencias necesarias</div><div class="v">3</div></div>
+  </div>
+
+  
+
+  <section>
+    <h2>Quién le paga a quién</h2>
+    <div class="transfer"><strong>Luis</strong><span class="arrow">paga a</span><strong>Ana</strong><span class="amt">Bs 983.67</span></div>
+<div class="transfer"><strong>Carla</strong><span class="arrow">paga a</span><strong>Ana</strong><span class="amt">Bs 729.58</span></div>
+<div class="transfer"><strong>Mauro</strong><span class="arrow">paga a</span><strong>Ana</strong><span class="amt">Bs 524.77</span></div>
+  </section>
+
+  <section>
+    <h2>Balance por persona</h2>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>Persona</th><th class="n">Pagó</th><th class="n">Le corresponde</th><th class="n">Balance</th></tr></thead>
+      <tbody><tr><td>Ana</td><td class="n">Bs 3 580.80</td><td class="n">Bs 1 342.78</td><td class="n pos">Bs 2 238.02</td></tr>
+<tr><td>Mauro</td><td class="n">Bs 681.40</td><td class="n">Bs 1 206.17</td><td class="n neg">-Bs 524.77</td></tr>
+<tr><td>Carla</td><td class="n">Bs 633.20</td><td class="n">Bs 1 362.78</td><td class="n neg">-Bs 729.58</td></tr>
+<tr><td>Luis</td><td class="n">Bs 270.50</td><td class="n">Bs 1 254.17</td><td class="n neg">-Bs 983.67</td></tr></tbody>
+    </table>
+    </div>
+  </section>
+
+  <div class="grid2">
+    <section>
+      <h2>Gasto por categoría</h2>
+      <div class="bar-row"><span>Entradas y tours</span><div class="bar-track"><div class="bar-fill" style="width:100.0%;background:#2E9E6B"></div></div><span class="n">Bs 3 400.80 <small>(66%)</small></span></div>
+<div class="bar-row"><span>Transporte</span><div class="bar-track"><div class="bar-fill" style="width:17.5%;background:#3B82C4"></div></div><span class="n">Bs 595.00 <small>(12%)</small></span></div>
+<div class="bar-row"><span>Comida</span><div class="bar-track"><div class="bar-fill" style="width:15.8%;background:#E8743B"></div></div><span class="n">Bs 536.90 <small>(10%)</small></span></div>
+<div class="bar-row"><span>Alojamiento</span><div class="bar-track"><div class="bar-fill" style="width:9.4%;background:#7A5CC7"></div></div><span class="n">Bs 320.00 <small>(6%)</small></span></div>
+<div class="bar-row"><span>Compras</span><div class="bar-track"><div class="bar-fill" style="width:9.2%;background:#C9489A"></div></div><span class="n">Bs 313.20 <small>(6%)</small></span></div>
+    </section>
+    <section>
+      <h2>Consumo por persona</h2>
+      <div class="bar-row"><span>Carla</span><div class="bar-track"><div class="bar-fill" style="width:100.0%;background:#1F6F5C"></div></div><span class="n">Bs 1 362.78 <small>(26%)</small></span></div>
+<div class="bar-row"><span>Ana</span><div class="bar-track"><div class="bar-fill" style="width:98.5%;background:#1F6F5C"></div></div><span class="n">Bs 1 342.78 <small>(26%)</small></span></div>
+<div class="bar-row"><span>Luis</span><div class="bar-track"><div class="bar-fill" style="width:92.0%;background:#1F6F5C"></div></div><span class="n">Bs 1 254.17 <small>(24%)</small></span></div>
+<div class="bar-row"><span>Mauro</span><div class="bar-track"><div class="bar-fill" style="width:88.5%;background:#1F6F5C"></div></div><span class="n">Bs 1 206.17 <small>(23%)</small></span></div>
+    </section>
+  </div>
+
+  <section>
+    <h2>Detalle de gastos</h2>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>Fecha</th><th>Descripción</th><th>Categoría</th><th>Pagó</th><th>Participantes</th><th class="n">Original</th><th class="n">Monto (BOB)</th></tr></thead>
+      <tbody><tr><td>2026-08-14</td><td>Bus La Paz - Uyuni (4 pasajes)</td><td><span class="pill" style="background:#3B82C4">Transporte</span></td><td>Mauro</td><td>Mauro, Ana, Luis, Carla</td><td class="n">560.00 BOB</td><td class="n">Bs 560.00</td></tr>
+<tr><td>2026-08-15</td><td>Tour 3 días Salar (agencia)</td><td><span class="pill" style="background:#2E9E6B">Entradas y tours</span></td><td>Ana</td><td>Mauro, Ana, Luis, Carla</td><td class="n">480.00 USD</td><td class="n">Bs 3 340.80</td></tr>
+<tr><td>2026-08-15</td><td>Almuerzo en Colchani</td><td><span class="pill" style="background:#E8743B">Comida</span></td><td>Luis</td><td>Mauro, Ana, Luis, Carla</td><td class="n">210.50 BOB</td><td class="n">Bs 210.50</td></tr>
+<tr><td>2026-08-15</td><td>Hostal noche 1</td><td><span class="pill" style="background:#7A5CC7">Alojamiento</span></td><td>Carla</td><td>Mauro, Ana, Luis, Carla</td><td class="n">320.00 BOB</td><td class="n">Bs 320.00</td></tr>
+<tr><td>2026-08-16</td><td>Snacks y agua para el tour</td><td><span class="pill" style="background:#E8743B">Comida</span></td><td>Mauro</td><td>Mauro, Ana, Luis, Carla</td><td class="n">86.40 BOB</td><td class="n">Bs 86.40</td></tr>
+<tr><td>2026-08-16</td><td>Cena (Luis pidió doble)</td><td><span class="pill" style="background:#E8743B">Comida</span></td><td>Ana</td><td>Ana, Luis×2, Carla, Mauro</td><td class="n">240.00 BOB</td><td class="n">Bs 240.00</td></tr>
+<tr><td>2026-08-17</td><td>Aguas termales Polques</td><td><span class="pill" style="background:#2E9E6B">Entradas y tours</span></td><td>Luis</td><td>Luis, Carla, Mauro</td><td class="n">60.00 BOB</td><td class="n">Bs 60.00</td></tr>
+<tr><td>2026-08-17</td><td>Souvenirs de sal</td><td><span class="pill" style="background:#C9489A">Compras</span></td><td>Carla</td><td>Carla, Ana</td><td class="n">45.00 USD</td><td class="n">Bs 313.20</td></tr>
+<tr><td>2026-08-18</td><td>Taxi al terminal</td><td><span class="pill" style="background:#3B82C4">Transporte</span></td><td>Mauro</td><td>Mauro, Ana, Luis, Carla</td><td class="n">35.00 BOB</td><td class="n">Bs 35.00</td></tr></tbody>
+    </table>
+    </div>
+  </section>
+
+  <footer>Skill <strong>dividir-gastos</strong> · Balance positivo = le deben; negativo = debe.</footer>
+</main>
+</body>
+</html>
